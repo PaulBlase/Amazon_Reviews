@@ -3,7 +3,14 @@
 ## Dataset
 This dataset provides a set of 34.7 thousand reviews of the Amazon Kindle, Fire Stick, and other products. Provided by Datainfiniti's Product Base, it was made available through Kaggle (https://www.kaggle.com/datafiniti/consumer-reviews-of-amazon-products).
 
+While there are a multitude of different reviews posted on different products, which reviews provide the most value? In this assessment I hope to analyze what is written in a valuable review and what those reviews detail as true. In order to assess this, from the initial dataset, we will analyze the text in the title and review, the number of helpful ratings, and the review's rating of the product. 
+
 ## Initial Assessment of Reviews
+![helpful_rev](https://user-images.githubusercontent.com/40553610/61302219-67903780-a7b3-11e9-8a11-39d3dd06ac83.jpeg)
+
+First, reviews are broken down into helpful (being marked as helpful by at least one other customer) or unhelpful. Based on missing values, we do not have a mark for helpfulness on 529 reviews. These will be deemed as unhelpful, receiving a zero mark for the numeric value. The remaining observations with missing values are removed, leaving a total of 34,621 observations.
+
+![help_map](https://user-images.githubusercontent.com/40553610/61257799-8f928300-a740-11e9-8c2c-b1b99e11170c.jpeg)![help_map1](https://user-images.githubusercontent.com/40553610/61257810-9a4d1800-a740-11e9-938a-77fc5d45397f.jpeg)
 
 ## Subjectivity and Polarity
 
@@ -12,7 +19,7 @@ In order to better assess specific elements of the reviews, stop words were remo
 
 ![wordcloud_crop](https://user-images.githubusercontent.com/40553610/61241436-7d4d2080-a711-11e9-959f-26ae311decdc.jpeg)
 
-From this initial point, reviews were broken down into helpful and unhelpful reviews (helpful meaning at least one other user marked the review as helpful). From there, similar words were assessed the an updated stop words list and removed. In addition, words that did not really define specifically value or detrimental parts of the Kindle (specifically adjectives like "excellent" or "bad") were removed to pinpoint clearer talking points.
+From this initial point, reviews were broken down into helpful and unhelpful reviews. From there, similar words were assessed the an updated stop words list and removed. In addition, words that did not really define specifically value or detrimental parts of the Kindle (specifically adjectives like "excellent" or "bad") were removed to pinpoint clearer talking points.
 
 Assessing differences between helpful and unhelpful reviews, these were the wordclouds for the separate datasets:
 
