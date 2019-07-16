@@ -10,7 +10,19 @@ While there are a multitude of different reviews posted on different products, w
 
 First, reviews are broken down into helpful (being marked as helpful by at least one other customer) or unhelpful. Based on missing values, we do not have a mark for helpfulness on 529 reviews. These will be deemed as unhelpful, receiving a zero mark for the numeric value. The remaining observations with missing values are removed, leaving a total of 34,621 observations.
 
+This leaves us with a total of 3,309 reviews deemed helpful. These reviews, broken down by rating, are listed below:
+
 ![help_map](https://user-images.githubusercontent.com/40553610/61257799-8f928300-a740-11e9-8c2c-b1b99e11170c.jpeg)![help_map1](https://user-images.githubusercontent.com/40553610/61257810-9a4d1800-a740-11e9-938a-77fc5d45397f.jpeg)
+
+We see that the majority of reviews received about Amazon products are positive. However, lower ratings are consistent with a higher percentage of helpful reviews, possibly because they critque specific elements more thoroughly and also being that they stand out from the multitude of more positive reviews.
+
+In analyzing the text, we struggle to distinguish trends from the data the truly differentiate the helpful and unhelpful reviews from each other. Often we find a trend in the distribution plots that match this, highlighting the number of characters in a review text.
+
+![helpful_char](https://user-images.githubusercontent.com/40553610/61308844-19813100-a7bf-11e9-8bd6-cad0c1f71869.jpeg)
+
+However, when assessing the title text, we do see one identifier. In helpful reviews, generally we see at least one capitalized character and no more than three. Assuming that unhelpful reviews are emotionally charged, that might lead to someone capitalizing characters excessively and could be a quick rule of thumb to assess review quality.
+
+![helpful_uptitle](https://user-images.githubusercontent.com/40553610/61309030-7bda3180-a7bf-11e9-96fa-8d782f75970f.jpeg)
 
 ## Subjectivity and Polarity
 
