@@ -6,28 +6,46 @@ This dataset provides a set of 34.7 thousand reviews of the Amazon Kindle, Fire 
 While there are a multitude of different reviews posted on different products, which reviews provide the most value? In this assessment I hope to analyze what is written in a valuable review and what those reviews detail as true. In order to assess this, from the initial dataset, we will analyze the text in the title and review, the number of helpful ratings, and the review's rating of the product. 
 
 ## Initial Assessment of Reviews
-![helpful_rev](https://user-images.githubusercontent.com/40553610/61302219-67903780-a7b3-11e9-8a11-39d3dd06ac83.jpeg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40553610/61302219-67903780-a7b3-11e9-8a11-39d3dd06ac83.jpeg">
+</p>
 
 First, reviews are broken down into helpful (being marked as helpful by at least one other customer) or unhelpful. Based on missing values, we do not have a mark for helpfulness on 529 reviews. These will be deemed as unhelpful, receiving a zero mark for the numeric value. The remaining observations with missing values are removed, leaving a total of 34,621 observations.
 
 This leaves us with a total of 3,309 reviews deemed helpful. These reviews, broken down by rating, are listed below:
 
-![help_map](https://user-images.githubusercontent.com/40553610/61257799-8f928300-a740-11e9-8c2c-b1b99e11170c.jpeg)![help_map1](https://user-images.githubusercontent.com/40553610/61257810-9a4d1800-a740-11e9-938a-77fc5d45397f.jpeg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40553610/61257799-8f928300-a740-11e9-8c2c-b1b99e11170c.jpeg">
+  <img src="https://user-images.githubusercontent.com/40553610/61257810-9a4d1800-a740-11e9-938a-77fc5d45397f.jpeg">
+</p>
 
 We see that the majority of reviews received about Amazon products are positive. However, lower ratings are consistent with a higher percentage of helpful reviews, possibly because they critque specific elements more thoroughly and also being that they stand out from the multitude of more positive reviews.
 
 In analyzing the text, we struggle to distinguish trends from the data the truly differentiate the helpful and unhelpful reviews from each other. Often we find a trend in the distribution plots that match this, highlighting the number of characters in a review text.
 
-![helpful_char](https://user-images.githubusercontent.com/40553610/61308844-19813100-a7bf-11e9-8bd6-cad0c1f71869.jpeg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40553610/61308844-19813100-a7bf-11e9-8bd6-cad0c1f71869.jpeg">
+</p>
 
 However, when assessing the title text, we do see one identifier. In helpful reviews, generally we see at least one capitalized character and no more than three. Assuming that unhelpful reviews are emotionally charged, that might lead to someone capitalizing characters excessively and could be a quick rule of thumb to assess review quality.
 
-![helpful_uptitle](https://user-images.githubusercontent.com/40553610/61309030-7bda3180-a7bf-11e9-96fa-8d782f75970f.jpeg)
+<p align="center">
+  <img src=https://user-images.githubusercontent.com/40553610/61309030-7bda3180-a7bf-11e9-96fa-8d782f75970f.jpeg>
+</p>
 
 ## Subjectivity and Polarity
+In an effort to better understand the content of the posts overall, we try to assess our reviews by sentiment values. Specifically, we will be looking at the polarity (positive or negative sentiment in post) and subjectivity based on assessing the words from the original text. 
 
-![polplot](https://user-images.githubusercontent.com/40553610/61425996-d4581e80-a8e6-11e9-9248-653946dc2f8c.jpeg) ![subjplot](https://user-images.githubusercontent.com/40553610/61425999-d7530f00-a8e6-11e9-9124-c195d344bdcf.jpeg)
+From evaluating the differences between helpful and unhelpful reviews, we don't see much that distinguishes these groups from each other. Distributions from both polarity and subjectivity line up closely, so we would not expect this to provide much insight when trying to select helpful reviews. While we are assessing, perhaps we can draw insight from the differences between reviews of different ratings:
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/40553610/61425996-d4581e80-a8e6-11e9-9248-653946dc2f8c.jpeg">
+  <img src="https://user-images.githubusercontent.com/40553610/61425999-d7530f00-a8e6-11e9-9124-c195d344bdcf.jpeg" width="808" height="370">
+</p>
+
+I scaled the number of characters to a log scale in order to create a wider separation between the values, having so many reviews with fewer characters. What we can draw from these plots positive reviews are more subjective overall and, unsurprisingly, have a more positive polarity compared to negative reviews. 
+
+As the number of characters increases, we see a regression in these reviews, suggesting more neutral sentiment with more characters. That said, there is more data for positive reviews and perhaps similar trends would present themselves with more data on the negative side. On the subjectivity side, both positive and negative reviews display similar trends with character length.
 
 ## Wordclouds
 In order to better assess specific elements of the reviews, stop words were removed and wordcloud modeling was done to assess the main topics of the user reviews as a whole.
