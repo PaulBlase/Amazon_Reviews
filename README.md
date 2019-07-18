@@ -26,6 +26,9 @@ However, when assessing the title text, we do see one identifier. In helpful rev
 
 ## Subjectivity and Polarity
 
+![polplot](https://user-images.githubusercontent.com/40553610/61425996-d4581e80-a8e6-11e9-9248-653946dc2f8c.jpeg) ![subjplot](https://user-images.githubusercontent.com/40553610/61425999-d7530f00-a8e6-11e9-9124-c195d344bdcf.jpeg)
+
+
 ## Wordclouds
 In order to better assess specific elements of the reviews, stop words were removed and wordcloud modeling was done to assess the main topics of the user reviews as a whole.
 
